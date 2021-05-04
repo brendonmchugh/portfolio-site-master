@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Concord Seed Lending Library</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="slider.css">
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans:500" rel="stylesheet">
+    </head>
+    <body>
+      <style>
+        body {
+          background-image: url(Background.png);
+          background-repeat: repeat;
+          background-attachment: fixed; 
+         
+        }
+        <style>
+          .about-me {
+    height: 100vh !important;
+    background-color: cadetblue !important;
+    padding: 20vh 50px 0 50px;
+    column-count: 2;
+}
+
+.about-me img{
+  width: 60%;
+  border-radius: 8%;
+  margin-bottom: 0em;
+}
+
+.about-me p{
+  text-align: center;
+  font-size:1em;
+  line-height: 1.5rem;
+}
+.paragraph2{
+  text-indent: 2em;
+}
+/* the span tag that wrap starts off my paragraph */
+.bigText {
+  font-size:2em;
+  padding-right:.5em;
+  text-decoration: rgb(75, 255, 204);
+}
+.borderexample {
+ border-style:solid;
+ border-color:#287EC7;
+}
+
+</style>
+        </style>
+        <h2 style="text-align:center;"></p>Brendon McHugh</h2>
+        <div>
+        <section class="about-me regular-wrapper">
+          
+            <p style="text-align:center;"><img class="image" src="/images/portrait self.png" width="auto">
+            
+               <p> <span class="bigText"><b>Graphic Designer</b></p>
+
+                
+               </span>
+
+               <p style="padding: 10px; background-color:lightblue;"> My name is Brendon McHugh, I am a young 19-year-old Graphic Designer
+                that is diverse in many different adobe applications.  I am from Falmouth MA and went to Falmouth High School,
+                I am currently enrolled at Umass Dartmouth and am a sophomore. I have one volunteering experience at
+                Woods Hole Oceanic Institution (WHOI). While at WHOI I helped them with their online store by editing pictures
+                and merchandise so they could put it on their website ready to be viewed for all. I also have
+                experience when it comes to making designs for clothing as part of a yearly assignment that I 
+                would come up with a new shirt design everyyear for a 5k. Some things about me are I enjoy meeting new 
+                people especially hwen it involves wokring on art or just has something to do with making things.
+                </p>
+
+                </p>
+        </section>
+      </div>
+        <div class="slideshow-container">
+
+            
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+        
+        <script src="" async defer></script>
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+
+<button onclick="goBack()">Go Back</button>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+    </body>
+</html>

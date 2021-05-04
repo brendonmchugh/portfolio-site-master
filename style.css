@@ -1,0 +1,283 @@
+* {
+    font-family: 'Georgia', "Baskerville URW";
+    margin: 0;
+    padding: 0;
+}
+
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* NAVBAR CSS */
+nav{
+    padding-left:4em;
+    padding-right: 4em;
+    /* TODO: figure out no longer staying fixed */
+    position: center;
+    width: 100%;
+    top:020;
+    left:0;
+    z-index:10;
+    background-image: url("/images/logo\ mark_v8\ copy.svg");
+    background-repeat: no-repeat;
+    margin-left: auto;
+  }
+  .logo{
+    height:90px;
+    width: 150px;
+    margin-left: 120px;
+    margin-top: 25px;
+  }
+  
+  nav{
+    grid-template-columns: 1fr, 1fr, 1fr, 1fr;
+    grid-area: auto;
+    grid-template-rows: auto;
+  }
+
+  nav ul {
+    margin: 50px;;
+    padding: 35px;
+    display:flex;
+  }
+  nav li{
+    padding: 1em 0;
+    list-style-type: none;
+    padding: 25px;
+    font-size: 1.7em;
+  }
+  nav{
+    background-color: darkslategrey;
+    position:relative;
+  }
+  
+  nav li a {
+    color:rgb(153, 199, 255);
+    font-weight: 600;
+    font-size: 20px;
+    opacity: 0.6;
+    text-decoration: none;
+    transition: .3s;
+  }
+  
+  nav li a:hover {
+    color:rgb(255, 241, 112);
+    opacity: 1;
+    text-decoration: none;
+  }
+
+  /* HEADER CSS */
+.header {
+    position: fixed;
+    background-image: url("/images/geometric-decoration-5836.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 25vh;
+    background-color: rgb(148, 148, 148);
+}
+
+
+.welcome{
+    margin-top: 25vh;
+    text-align: center;
+    text-align: auto;
+    font-weight: 500;
+    font-size:4em;
+    color: rgb(0, 255, 217)}
+
+#changingword {
+    color:rgb(255, 255, 255);
+      } 
+
+/* IMAGE GALLERY CSS */
+.image-gallery {
+    height: 100%;
+    display: grid;
+    background-color: dimgrey;
+    height: max-content;
+    grid-template-columns: 1fr minmax(350px, 1fr)  minmax(350px, 1fr) minmax(350px, 1fr) 1fr;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    grid-template-areas:
+    ". a b c ."
+    ". d e f ."
+    ;
+}
+
+.box-styling {
+  height: 350px;
+      /* clip-path: polygon(5% 5%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%); */
+}
+
+.box-wrapper{
+  height:350px;
+  border-radius: 1%;
+}
+.box1 {
+    grid-area: a;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+
+}
+
+.box2 {
+    grid-area: b;
+}
+
+.box3 {
+    grid-area: c;
+}
+
+.box4 {
+    grid-area: d;
+}
+
+.box5 {
+    grid-area: e;
+}
+
+.box6 {
+    grid-area: f;
+}
+
+.bigText {
+    font-size: 2em;
+    padding-right: .5ch;
+}
+
+
+/* ABOUT ME CSS*/
+
+/* CONTACT CSS */
+.contact {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 25vh !important;
+    padding-bottom: 50vh;
+    background-color: burlywood !important;
+    grid-template-columns: 3fr minmax(2fr, 1fr) minmax(2fr, 1fr) 3fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    ". title title ."
+    ". logo wrapper ."
+    ;
+}
+
+.contact-title {
+    font-size: 2em;
+    grid-area: title;
+    padding-bottom: 50px;
+}
+
+.logo-svg {
+    width: 300px;
+    grid-area: logo;
+}
+
+.contact-wrapper {
+    grid-area: wrapper;
+}
+
+
+   /* footer section */
+   footer{
+    grid-area:footer;
+  }
+  footer p{
+    font-size:2em;
+  }
+  footer li {
+    display:inline;
+  }
+  footer ul {
+    max-width: 640px;
+    margin: 2em auto;
+    padding:0;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+  }
+  footer ul li{
+    list-style: none;
+    align-self:flex-end;
+  }
+  footer ul li a {
+    text-decoration:none;
+    color: black;
+    opacity:.6;
+    transition: .3s;
+  }
+  footer ul li a:hover {
+    text-decoration:none;
+    color:white;
+  }
+  footer svg {
+    width:20%;
+  }
+  footer p{
+    font-size: 1em;
+  }
+
+
+
+  /* MEDIA QUERY FOR SMALL SCREENS */
+ @media (max-width:1400px){
+    .image-gallery {
+      padding-bottom: 0px;
+        margin-bottom: 600px;
+        grid-template-columns: 1fr minmax(350px, 1fr) minmax(350px, 1fr) 1fr;
+        grid-template-areas:
+        ". a b ."
+        ". c d ."
+        ". e f ."
+        ;
+    }
+ }
+
+/* MEDIA QUERY FOR MOBILE */
+ @media (max-width:100px){
+     nav {
+         padding-left: 0;
+     }
+
+    .image-gallery {
+        padding-bottom: 200%;
+        grid-template-columns: 1fr minmax(400px, 1fr) 1fr;
+        grid-template-areas:
+        ".a."
+        ".b."
+        ".c."
+        ".d."
+        ".e."
+        ".f."
+        ;
+    }
+
+    .contact {
+        padding-bottom: 200%;
+        grid-template-columns: 3fr minmax(2fr, 1fr) 3fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        ". title ."
+        ". logo ."
+        ". wrapper ."
+        ;
+    }
+    
+ }
+
+
+ .center {
+   display:block;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: auto;
+   margin-bottom: auto;
+ }
+
+
